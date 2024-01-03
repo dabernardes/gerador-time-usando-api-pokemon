@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/style1.css">
+</head>
+<body>
+    <div id="geral" class="container">
+        <div class="titulo"><h1>GERADOR DE TIMES USANDO API POKEMON</h1></div>
+        
+        <div>
+            <select id="escolha">
+                <option id="o-1"></option>
+                <option id="o0">Todas</option>
+                <option id="o1">1º GERAÇÃO</option>
+                <option id="o2">2º GERAÇÃO</option>
+                <option id="o3">3º GERAÇÃO</option>
+                <option id="o4">4º GERAÇÃO</option>
+                <option id="o5">5º GERAÇÃO</option>
+                <option id="o6">6º GERAÇÃO</option>
+                <option id="o7">6º GERAÇÃO</option>
+                <option id="o8">7º GERAÇÃO</option>
+                <option id="o9">8º GERAÇÃO</option>
+            </select>
+            <br><br>
+            <div id="selecao">
+            <input type="radio" name="a" id="randon" checked>Aleatorio
+            <input type="radio" name="a" id="person">Personagem
+            <input type="radio" name="a" id="type">Tipo
+            <input type="radio" name="a" id="color">Cor
+            </div>
+            <br>
+            <div id="cont">
+            <select id="lperson">
+                <option id="p1">Ash</option>
+                <option id="p2">Gary</option>
+                <option id="p3">E. Rocket</option>
+            </select>
+            <select id="ltipo">
+                <option id="t1">Grama</option>
+                <option id="t2">Fogo</option>
+                <option id="t3">Água</option>
+                <option id="t4">Elétrico</option>
+                <option id="t5">Normal</option>
+                <option id="t6">Fantasma</option>
+                <option id="t7">Psiquico</option>
+            </select>
+            <select id="lcor">
+                <option id="c1">Verde</option>
+                <option id="c2">Vermelho</option>
+                <option id="c3">Amarelo</option>
+                <option id="c4">Azul</option>
+                <option id="c5">Cinza</option>
+                <option id="c6">Rosa</option>
+                <option id="c7">Marron</option>
+            </select>
+        </div>
+            <br><br>
+            <input type="button" id="btn" value="Gerar">
+        </div>
+        <div id="result" class="resultado">
+            <div id="poke1" class="pokediv"></div>
+            <div id="poke2" class="pokediv"></div>
+            <div id="poke3" class="pokediv"></div>
+            <div id="poke4" class="pokediv"></div>
+            <div id="poke5" class="pokediv"></div>
+            <div id="poke6" class="pokediv"></div>
+        </div>
+   </div> 
+   <script src="/js/script1.js"></script>
+</body>
+  
+   
+</html>

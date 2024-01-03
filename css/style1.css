@@ -1,0 +1,45 @@
+body{
+    text-align: center;
+    background-color: rgb(123, 134, 117);
+}
+#selecao{
+    visibility: hidden;
+}
+#lperson{
+    visibility: hidden; 
+    left:41%; 
+    position:absolute ;
+}
+#ltipo{
+    visibility: hidden;  
+    position:absolute; 
+    left:41%;  
+}
+#lcor{
+    visibility: hidden;
+    position:absolute ;
+    left:41%;    
+}
+#btn{
+    border-radius: 5px;
+    height:30px;
+    width: 60px;
+    background-color: rgb(114, 157, 143);
+    border-color: rgb(48, 76, 53);
+}
+#btn:hover{
+    background-color: aquamarine;
+}
+#cont{
+    align-items: center;
+
+}
+.pokeDiv {
+    flex-basis: 40%;
+    margin: 1em;
+}
+#result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
