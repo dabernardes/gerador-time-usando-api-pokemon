@@ -222,49 +222,47 @@ function updateDiv(pokemon, divId) {
 function handleClick() {
     const divs = ['poke1', 'poke2', 'poke3', 'poke4', 'poke5', 'poke6'];
     const escolha = document.getElementById(ELEMENT_IDS.escolha).value;
+    const selecao = document.getElementById(ELEMENT_IDS.selecao).value;
     let maxId;
-    let minId;
+    let ids;
     
     switch (escolha) {
         case '1º GERAÇÃO':
-            maxId = 151;
-            minId = 1;
+            ids = Array.from({length: 151}, (_, i) => i + 1);
             break;
-        
         case '2º GERAÇÃO':
-            maxId = 251;
-            minId = 152;
+            ids = Array.from({length: 100}, (_, i) => i + 152);
             break;
         case '3º GERAÇÃO':
-            maxId = 386;
-            minId = 252;
+            ids = Array.from({length: 135}, (_, i) => i + 252);
             break;
         case '4º GERAÇÃO':
-            maxId = 493;
-            minId = 387;
+            ids = Array.from({length: 107}, (_, i) => i + 387);
             break;
         case '5º GERAÇÃO':
-            maxId = 649;
-            minId = 494;
+            ids = Array.from({length: 156}, (_, i) => i + 494);
             break;
         case '6º GERAÇÃO':
-            maxId = 721;
-            minId = 650;
+            ids = Array.from({length: 72}, (_, i) => i + 650);
             break;
         case '7º GERAÇÃO':
-            maxId = 809;
-            minId = 722;
+            ids = Array.from({length: 88}, (_, i) => i + 722);
             break;
         case '8º GERAÇÃO':
-            maxId = 905;
-            minId = 810;
+            ids = Array.from({length: 96}, (_, i) => i + 810);
             break;
         default:
-            maxId = 905;
-            minId = 1;
+            ids = Array.from({length: 905}, (_, i) => i + 1);
     }
+
+     if( selecao === 'Person'){
+        const lperson = document.getElementById(ELEMENT_IDS.lperson).value;
+        if(lperson === 'Ash'){
+            ids = ids.filter(id => [1, 4, 5, 6, 7, 10, 27, 36, 78, 125, 150].includes(id));
+     }}
+
     divs.forEach(div => {
-        const randomId = getRandomInt(minId, maxId); 
+        const randomId = ids[Math.floor(Math.random() * ids.length)]; 
         getPokemonData(randomId)
             .then(pokemon => updateDiv(pokemon, div));
     });
