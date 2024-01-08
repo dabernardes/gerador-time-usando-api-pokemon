@@ -238,9 +238,18 @@ function handleClick() {
             ids = Array.from({length: 151}, (_, i) => i + 1);
             if( selecao === 'person'){
                 const lperson = document.getElementById(ELEMENT_IDS.lperson).value;
-                if(lperson === 'Ash'){
-                    ids = ids.filter(id => [1, 4, 5, 6, 7, 10, 11, 12, 20, 25, 57, 89, 93, 98, 99, 122, 128, 131, 143].includes(id));
-             }}
+                              
+                    if(lperson === 'Ash'){
+                      ids = ids.filter(id => [1, 4, 5, 6, 7, 10, 11, 12, 20, 25, 57, 89, 93, 98, 99, 122, 128, 131, 143 ,149 , 94, 83].includes(id));
+              }else if(lperson === 'Gary'){
+                      ids = ids.filter(id => [ 1, 7, 8, 9, 12, 15, 16, 22, 27, 31 ,34, 37, 59, 65, 76, 84, 85, 95, 99, 101, 103, 105, 106, 117, 120, 126, 127, 128, 132, 133, 142].includes(id));
+              }
+            }else if(selecao === 'type'){
+                const ltipo = document.getElementById(ELEMENT_IDS.ltipo).value; 
+                if (ltipo === 'Grama'){
+                    ids = ids.filter(id => [1, 2, 3, 43, 44, 45, 46, 47, 69, 70, 71, 102, 103, 114].includes(id));
+                }
+            }
             break;
         case '2º GERAÇÃO':
             ids = Array.from({length: 100}, (_, i) => i + 152);
@@ -248,7 +257,10 @@ function handleClick() {
                 const lperson = document.getElementById(ELEMENT_IDS.lperson).value;
                 if(lperson === 'Ash'){
                     ids = ids.filter(id => [214, 152, 153, 155, 156, 158, 164, 231, 232, 190, 207].includes(id));
-             }} 
+             }else if(lperson === 'Gary'){
+                ids = ids.filter(id => [ 163, 197, 212, 215, 216, 227, 229, 230, 235].includes(id));
+              }
+            } 
             break;
 
         case '3º GERAÇÃO':
@@ -264,7 +276,7 @@ function handleClick() {
             if( selecao === 'person'){
                 const lperson = document.getElementById(ELEMENT_IDS.lperson).value;
                 if(lperson === 'Ash'){
-                    ids = ids.filter(id => [396, 397, 398, 387, 388, 389, 390, 391, 392, 418, 472, 443 ].includes(id));
+                    ids = ids.filter(id => [396, 397, 398, 387, 388, 389, 390, 391, 392, 418, 472, 443, 447, 448 ].includes(id));
              }}
             break;
         case '5º GERAÇÃO':
@@ -277,16 +289,39 @@ function handleClick() {
             break;
         case '6º GERAÇÃO':
             ids = Array.from({length: 72}, (_, i) => i + 650);
+            if( selecao === 'person'){
+                const lperson = document.getElementById(ELEMENT_IDS.lperson).value;
+                if(lperson === 'Ash'){
+                    ids = ids.filter(id => [656, 657, 658, 661, 662, 663, 701, 704, 705, 706, 714, 715].includes(id));
+             }}
             break;
         case '7º GERAÇÃO':
             ids = Array.from({length: 88}, (_, i) => i + 722);
+            if( selecao === 'person'){
+                const lperson = document.getElementById(ELEMENT_IDS.lperson).value;
+                if(lperson === 'Ash'){
+                    ids = ids.filter(id => [722, 744, 745, 725, 726, 727, 794, 803, 804, 805, 808, 809, 795].includes(id));
+             }}
             break;
         case '8º GERAÇÃO':
             ids = Array.from({length: 96}, (_, i) => i + 810);
+            if( selecao === 'person'){
+                const lperson = document.getElementById(ELEMENT_IDS.lperson).value;
+                if(lperson === 'Ash'){
+                    ids = ids.filter(id => [865, 882].includes(id));
+             }}
             break;
         default:
             ids = Array.from({length: 905}, (_, i) => i + 1);
-    }
+            if( selecao === 'person'){
+                const lperson = document.getElementById(ELEMENT_IDS.lperson).value;
+                if(lperson === 'Ash'){
+                    ids = ids.filter(id => [865, 882, 722, 744, 745, 725, 726, 727, 794, 803, 804, 805, 808, 809, 795, 519, 520, 521, 501, 498, 499, 495, 559, 540, 541, 542, 536, 524, 525, 552, 553, 656, 657, 658, 661, 662, 663, 701, 704, 705, 706, 714, 715, 396, 397, 398, 387, 388, 389, 390, 391, 392, 418, 472, 443, 447, 448,276, 277, 252, 253, 254, 341, 324, 361, 362, 214, 152, 153, 155, 156, 158, 164, 231, 232, 190, 207, 214, 152, 153, 155, 156, 158, 164, 231, 232, 190, 207, 1, 4, 5, 6, 7, 10, 11, 12, 20, 25, 57, 89, 93, 98, 99, 122, 128, 131, 143 ,149 , 94, 83  ].includes(id));
+             }else if(lperson === 'Gary'){
+                ids = ids.filter(id => [ 1, 7, 8, 9, 12, 15, 16, 22, 27, 31 ,34, 37, 59, 65, 76, 84, 85, 95, 99, 101, 103, 105, 106, 117, 120, 126, 127, 128, 132, 133, 142, 163, 197, 212, 215, 216, 227, 229, 230, 235, 410, 466].includes(id));
+              }
+            }
+        }       
 
     
 
